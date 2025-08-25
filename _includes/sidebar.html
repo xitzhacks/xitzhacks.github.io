@@ -1,0 +1,23 @@
+<div class="sidebar">
+  <div class="brand">
+    <img src="{{ site.author.avatar | default: '/assets/img/avatar.png' }}" alt="avatar">
+    <div>
+      <h1>Under the XitzTree</h1>
+      <small>From sprout to root — write-ups & ops</small>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">🏠 Home</a>
+    <a href="{{ '/categories/' | relative_url }}">📚 Categories</a>
+    <a href="{{ '/tags/' | relative_url }}">🏷️ Tags</a>
+    <a href="{{ '/archives/' | relative_url }}">🗂️ Archives</a>
+    <a href="{{ '/whoami/' | relative_url }}">💻 PS C:\> WHOAMI</a>
+    <a href="{{ '/portfolio/' | relative_url }}">🧭 Portfolio</a>
+  </nav>
+  <div class="social">
+    <a href="https://github.com/xitzhacks" aria-label="GitHub">GH</a>
+    <a href="https://twitter.com/xitzhacks" aria-label="Twitter">TW</a>
+    <a href="mailto:contact@xitzhacks.dev" aria-label="Mail">✉️</a>
+  </div>
+  <div class="footer">© {{ site.time | date: '%Y' }} Sir Xitz</div>
+</div>

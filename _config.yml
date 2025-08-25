@@ -1,0 +1,39 @@
+title: "Under the XitzTree"
+description: "From sprout to root — my journey through write-ups and engagements."
+url: "https://xitzhacks.github.io"
+baseurl: ""
+permalink: /:categories/:year/:month/:day/:title/
+paginate: 5
+paginate_path: "/page:num/"
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+author:
+  name: "Sir Xitz"
+  bio: "Security Researcher • Red Teamer • OSINT • Dark Web"
+  avatar: "/assets/img/avatar.png"
+
+# Collections or defaults can be added later
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Sir Xitz"
+      comments: false
+      toc: true
+      badges: true
+      image: "/assets/img/cover.png"
+
+# Build settings
+theme: null
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json

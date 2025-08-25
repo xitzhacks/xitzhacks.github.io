@@ -1,0 +1,35 @@
+---
+layout: default
+title: Home
+---
+<div class="header">
+  <h2>Home</h2>
+  <div class="search"><input id="search" placeholder="Search posts..."></div>
+</div>
+
+<div class="cards">
+{% for post in paginator.posts %}
+  <article class="card" data-title="{{ post.title }}" data-tags="{{ post.tags | join: ' ' }}">
+    <div class="thumb">
+      {% if post.image %}<img src="{{ post.image }}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid var(--border)">{% else %}IMG{% endif %}
+    </div>
+    <div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <div class="meta">{{ post.date | date: "%b %d, %Y" }} • in {{ post.categories | join: ", " }}</div>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <div class="badges">
+        {% for tag in post.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
+      </div>
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">← Prev</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}">Next →</a>
+  {% endif %}
+</div>
