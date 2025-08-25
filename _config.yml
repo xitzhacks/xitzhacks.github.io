@@ -1,5 +1,5 @@
-title: "Under the XitzTree"
-description: "From sprout to root — my journey through write-ups and engagements."
+title: "xitzhacks"
+description: "from ."
 url: "https://xitzhacks.github.io"
 baseurl: ""
 permalink: /:categories/:year/:month/:day/:title/
@@ -13,8 +13,8 @@ plugins:
   - jekyll-paginate
 
 author:
-  name: "Sir Xitz"
-  bio: "Security Researcher • Red Teamer • OSINT • Dark Web"
+  name: "Xitz"
+  bio: "Security Researcher • Red Teamer • OSINT "
   avatar: "/assets/img/avatar.png"
 
 # Collections or defaults can be added later
